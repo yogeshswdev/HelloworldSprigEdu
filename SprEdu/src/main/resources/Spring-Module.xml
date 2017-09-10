@@ -1,0 +1,17 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="helloBean" class="SprEdureka.SprEdu.HelloWorld">
+		<property name="name" value="Yogesh" />
+	</bean>
+	<bean id="helloBean2" class="SprEdureka.SprEdu.HelloWorld2">
+		<property name="name" value="Khot" />
+	</bean>
+		
+	<bean id="app" class="SprEdureka.SprEdu.App">
+	<constructor-arg ref="helloBean"/><constructor-arg ref="helloBean2"/>
+	</bean>
+
+</beans>
